@@ -5,6 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link rel="stylesheet" href="styleSub.css">
+    <script src="checagem.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.0/jquery.mask.js"></script>
+
+
+    <script type="text/javascript">
+  $(document).ready(function(){
+     $("#telefone").mask("(99)99999-9999");
+      });
+    </script>
 
     <title>Cadastro</title>
    
@@ -41,15 +52,15 @@
 
       <div class="campo">
         <label>Insira seu CPF</label>
-        <input type="text" name="cpf" id="cpf" placeholder="CPF"  pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" required>
-        <small>012.345.678-90</small>
+        <input type="text" name="cpf" id="cpf" placeholder="CPF" maxlength="14" onblur="verificarCPF(this.value)" required>
+        
       </div>
    
 
       <div class="campo">
         <label>Insira seu telefone</label>
-        <input type="tel" name="telefone" id="telefone" placeholder="telefone" pattern="[0-9]{2}-[0-9]{5}-[0-9]{4}" required >
-        <small>00-91234-5678</small>
+        <input type="tel" name="telefone" id="telefone" placeholder="telefone" required >
+        
       </div>
 
       <div class="campo">
